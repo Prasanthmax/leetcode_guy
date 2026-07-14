@@ -1,0 +1,12 @@
+// Last updated: 14/07/2026, 14:49:36
+class Solution {
+    public int getSum(int a, int b) {
+        if(b==0) return a;
+        while(b!=0){
+            int carry=a&b;
+            a=a^b;
+            b=carry<<1;
+        }
+        return a;
+    }
+}
